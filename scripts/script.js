@@ -5,15 +5,15 @@ const { createApp } = Vue
 
 toDoes = [
     {
-        text: "fare la spesa",
+        text: "Fare la spesa",
         done: false,
     },
     {
-        text: "rifare il letto",
-        done: false,
+        text: "Rifare il letto",
+        done: true,
     },
     {
-        text: "annaffiare le piante",
+        text: "Annaffiare le piante",
         done: false,
     },
 
