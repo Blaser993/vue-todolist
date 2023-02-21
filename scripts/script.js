@@ -50,9 +50,11 @@ createApp({
 
   methods: {
     deleteTask(){
-        return console.log("click")
+        
+        this.toDoes.slice(0,1)
+        return console.log(this, toDoes)
     }
-  }
+  },
 
 }).mount('#app')
 
