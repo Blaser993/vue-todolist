@@ -41,9 +41,10 @@ toDoes = [
 createApp({
   data() {
     return {
-      message: 'Hello Vue!',
-      toDoes: toDoes,
-    }
-  }
+        message: 'Hello Vue!',
+        toDoes: toDoes,
+        delete: '<i class="fa-solid fa-trash"></i>',
+    },
+  },
 }).mount('#app')
 

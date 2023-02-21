@@ -31,8 +31,9 @@
                     :class="element.done === true ? 'barrato' : ''"
                     v-for='element in toDoes'
                     >
-                        {{element.text}}
+                        {{element.text}} <span v-html='delete'>ciao</span>
                     </li>
+                    
               
                 </ul>
               </div>
