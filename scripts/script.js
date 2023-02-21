@@ -48,10 +48,13 @@ createApp({
     }
   },
 
+
+  
   methods: {
     deleteTask(){
         
-        this.toDoes.slice(0,1)
+        toDoes.splice(0,1)
+        
         return console.log(this, toDoes)
     }
   },
