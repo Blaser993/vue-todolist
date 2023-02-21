@@ -43,8 +43,16 @@ createApp({
     return {
         message: 'Hello Vue!',
         toDoes: toDoes,
-        deleteKey: '<i class="fa-solid fa-trash"></i>'
+        deleteKey: '<i class="fa-solid fa-trash"></i>',
+        
+    }
+  },
+
+  methods: {
+    deleteTask(){
+        return console.log("click")
     }
   }
+
 }).mount('#app')
 

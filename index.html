@@ -32,7 +32,7 @@
                     :class="element.done === true ? 'barrato' : ''"
                     v-for='element in toDoes'
                     >
-                        {{element.text}} <div class="col-auto flex-grow-1" v-html="deleteKey"></div>
+                        {{element.text}} <div @click="deleteTask" class="col-auto flex-grow-1" v-html="deleteKey"></div>
                     </li>
                     
               
