@@ -7,3 +7,12 @@
 .barrato{
     text-decoration:line-through;
 }
+
+li div{
+    display: inline-block;
+    margin-left: auto;
+}
+
+li div i{
+   
+}

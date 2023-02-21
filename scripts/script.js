@@ -43,8 +43,8 @@ createApp({
     return {
         message: 'Hello Vue!',
         toDoes: toDoes,
-        delete: '<i class="fa-solid fa-trash"></i>',
-    },
-  },
+        deleteKey: '<i class="fa-solid fa-trash"></i>'
+    }
+  }
 }).mount('#app')
 
