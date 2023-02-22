@@ -48,7 +48,7 @@ createApp({
         message: 'Hello Vue!',
         toDoes: toDoes,
         deleteKey: '<i class="fa-solid fa-trash"></i>',
-        newTask: {text: 'Inserisci una nuova task', done: false},
+        Tasks: {text: 'Inserisci una nuova task', done: false},
         preview:""
     }
   },
@@ -70,7 +70,7 @@ createApp({
         
         
         preview = this.preview
-        console.log(this.newTask.text)
+        
     },
 
     addNewTask(){
@@ -80,15 +80,15 @@ createApp({
             return
         }
 
-        const newTask = {
+        const addTask = {
             text: text,
             done: false,
         }
 
-        this.newTask.text = this.preview
-        this.toDoes.push(this.newTask)
         
-        console.log(toDoes, this.preview, this )
+        this.toDoes.push(addTask)
+        this.preview = ""
+        
     },
   },
 
