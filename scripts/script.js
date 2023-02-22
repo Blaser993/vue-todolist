@@ -84,12 +84,18 @@ createApp({
             text: text,
             done: false,
         }
-
-        
+ 
         this.toDoes.push(addTask)
         this.preview = ""
         
     },
+
+    toggleTaskState(i){
+        const task = this.toDoes[i]
+        task.done = !task.done
+    },
+
+
   },
 
 }).mount('#app')

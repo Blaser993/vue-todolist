@@ -18,7 +18,7 @@
 
                 <div class="mb-3 row">
                     <label for="exampleFormControlInput1" class="form-label col-12 ps-0" >TO DO LIST</label>
-                    <input @click="clearTesto" type="email" class=" col-auto flex-grow-1" id="exampleFormControlInput1" v-model="preview">
+                    <input @click="clearTesto" type="email" class=" col-auto flex-grow-1" id="exampleFormControlInput1" v-model="preview" @keyup.enter="addNewTask">
                     <button class="btn btn-primary col-auto ms-3"
                     @click="addNewTask"
                     >
@@ -34,9 +34,10 @@
  
                     <li  class='list-group-item justify-between'
                     v-for='(element,i) in toDoes'
+                    @click="toggleTaskState(i)"
                     >
                        <span :class="element.done ? 'barrato' : ''">{{element.text}}</span> 
-                    <span @click='deleteTask(i)' class="col-auto flex-grow-1" v-html="deleteKey"></span>
+                    <span @click.stop='deleteTask(i)' class="col-auto flex-grow-1" v-html="deleteKey"></span>
                     </li>
                     
               
