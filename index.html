@@ -17,22 +17,26 @@
             <div class="container">
 
                 <div class="mb-3 row">
-                    <label for="exampleFormControlInput1" class="form-label col-12 ps-0">TO DO LIST</label>
-                    <input type="email" class=" col-auto flex-grow-1" id="exampleFormControlInput1" placeholder="inserisci una nuova task">
-                    <button class="btn btn-primary col-auto ms-3">Nuova task</button>
+                    <label for="exampleFormControlInput1" class="form-label col-12 ps-0" >TO DO LIST</label>
+                    <input @click="clearTesto" type="email" class=" col-auto flex-grow-1" id="exampleFormControlInput1" v-model="preview">
+                    <button class="btn btn-primary col-auto ms-3"
+                    @click="addNewTask"
+                    >
+                        Aggiungi task
+                    </button>
     
                 </div>
             </div>
 
             
             <div class="card col-12" >
-                <ul class="list-group list-group-flush  container-fluid">
+                <ul class="list-group list-group-flush  container px-2">
  
-                    <li  class='list-group-item justify-betwee'
-                    :class="element.done === true ? 'barrato' : ''"
-                    v-for='element in toDoes'
+                    <li  class='list-group-item justify-between'
+                    v-for='(element,i) in toDoes'
                     >
-                        {{element.text}} <div @click='deleteTask' class="col-auto flex-grow-1" v-html="deleteKey"></div>
+                       <span :class="element.done ? 'barrato' : ''">{{element.text}}</span> 
+                    <span @click='deleteTask(i)' class="col-auto flex-grow-1" v-html="deleteKey"></span>
                     </li>
                     
               

@@ -16,6 +16,10 @@ toDoes = [
         text: "Annaffiare le piante",
         done: false,
     },
+    {
+        text: "Scendere il cane",
+        done: false,
+    },
 
 ]
 
@@ -44,19 +48,48 @@ createApp({
         message: 'Hello Vue!',
         toDoes: toDoes,
         deleteKey: '<i class="fa-solid fa-trash"></i>',
-        
+        newTask: {text: 'Inserisci una nuova task', done: false},
+        preview:""
     }
   },
 
 
   
   methods: {
-    deleteTask(){
+    deleteTask(i){
         
-        this.toDoes.splice(0,1)
         
-        return console.log(this, toDoes)
-    }
+        this.toDoes.splice(i,1)
+        
+        
+        
+        console.log(this, toDoes)
+    },
+
+    clearTesto(){
+        
+        
+        preview = this.preview
+        console.log(this.newTask.text)
+    },
+
+    addNewTask(){
+        let text = this.preview.trim()
+
+        if(text === "") {
+            return
+        }
+
+        const newTask = {
+            text: text,
+            done: false,
+        }
+
+        this.newTask.text = this.preview
+        this.toDoes.push(this.newTask)
+        
+        console.log(toDoes, this.preview, this )
+    },
   },
 
 }).mount('#app')
